@@ -1,17 +1,27 @@
 
-nav{ 
-    background-color: lightblue;
-    text-align: justify;
-}
-p {
-    
+
+.text-container{
+    display: flex;
+        }
+
+
+
+
+.text-container p{
     width: 40%; /* Adjust to your preferred column size */
-    margin: 50; /* Ensures it stays flush left */
+    margin: 20px; /* Ensures it stays flush left */
     text-align: justify; /* Aligns text within the paragraph */
+    margin-top: 20px;
+
+        span {
+        font-size: 20px;
+        text-align: left;
+        }
 }
-
-
-
+img {
+    margin-top: 20px;
+    aspect-ratio: 1 / 1;
+}
 
 * { box-sizing: border-box; }
 
@@ -20,10 +30,13 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: #1f2a33;
   background: #ffffff;
+  font-size: 18px;
 }
 
 body > *{
-  max-width: 920px;          
+   width: 100%
+
+  max-width: 920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -33,6 +46,7 @@ header{
   margin-top: 20px;
   border: 1px solid #c9cfd6;
   overflow: hidden;
+
 }
 
 header h1,
@@ -45,7 +59,7 @@ header h2{
 header{
   background:
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("assets/banner.jpg"); /* <-- change this path */
+    url("assets/neuron .jpg"); /* <-- change this path */
   background-size: cover;
   background-position: center;
   padding: 18px 16px 10px;
