@@ -1,0 +1,11 @@
+
+nav{ 
+    background-color: lightblue;
+    text-align: justify;
+}
+p {
+    
+    width: 40%; /* Adjust to your preferred column size */
+    margin: 50; /* Ensures it stays flush left */
+    text-align: justify; /* Aligns text within the paragraph */
+}
