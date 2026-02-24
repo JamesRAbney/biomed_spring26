@@ -1,4 +1,33 @@
 
+
+.text-container{
+  display: flex;
+  gap: 18px;
+  margin: 14px auto;
+        }
+
+
+.Text{
+  flex: 1;
+  padding: 14px;
+  min-height: 140px;
+
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+
+.BookCover{
+  flex: 1;
+  padding: 14px;
+  min-height: 140px;
+
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
 nav{ 
     background-color: lightblue;
     text-align: justify;
@@ -30,10 +59,13 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: hwb(207 1% 63%);
   background: #ffffff;
+  font-size: 18px;
 }
 
 body > *{
-  max-width: 920px;          
+   width: 100%
+
+  max-width: 920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -43,6 +75,7 @@ header{
   margin-top: 20px;
   border: 1px solid #c9cfd6;
   overflow: hidden;
+
 }
 
 header h1,
@@ -55,7 +88,7 @@ header h2{
 header{
   background:
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("assets/neuron\ .jpg"); 
+    url("assets/neuron .jpg"); /* <-- change this path */
   background-size: cover;
   background-position: center;
   padding: 18px 16px 10px;
