@@ -11,10 +11,19 @@
   flex: 1;
   padding: 14px;
   min-height: 140px;
-
+  width: 60%; 
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  margin: 50; 
+  text-align: justify; 
+  
+  
+}
+
+.welcome { 
+  font-size: 20px;
+  font-weight: bold; 
 }
 
 
@@ -22,22 +31,30 @@
   flex: 1;
   padding: 14px;
   min-height: 140px;
-
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  img { 
+    margin: 15px;
+    border: 20px solid lightblue; 
+  }
+  #buybook {
+    text-align: center;
+  
+     a {
+      background-color: lightblue;
+      text-align: justify ; 
+      padding: 3px; 
+      border: 5px solid rgb(91, 91, 164); 
+      border-radius: 25px; 
+
+  }
+  }
 }
 
 nav{ 
     background-color: lightblue;
     text-align: justify;
-}
-p {
-    
-    width: 40%; /* Adjust to your preferred column size */
-    margin: 50; /* Ensures it stays flush left */
-    text-align: justify; /* Aligns text within the paragraph */
-    
 }
 
 
@@ -190,4 +207,10 @@ body > p{
 body > p a{
   color: #2b5f93;
   text-decoration: underline;
+}
+
+footer { 
+  font-size: 16px;
+  padding: 20px; 
+  font-family: 'Times New Roman', Times, serif;
 }
