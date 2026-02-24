@@ -16,19 +16,19 @@ p {
 
 .Intro-Text h3{
   font-family: Arial, Helvetica, sans-serif;
-  color: hwb(236 4% 76%);
+  color:#2b3f54;
   font-size: 14px;
 }
 
 .Intro-Text h2{
   font-family: Arial, Helvetica, sans-serif;
-  color: lab(6.46% 17.11 -30.39);
+  color:#203348;
 }
 
 body{
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: hwb(207 1% 63%);
+  color: #203348;
   background: #ffffff;
 }
 
@@ -125,8 +125,11 @@ body > h3{
 
 .Materials h3{
   margin: 0 0 6px;
-  color: #2b5f93;
   font-size: 15px;
+}
+
+.Materials h3 a{ 
+  color: #2b5f93;
   text-decoration: underline;
 }
 
