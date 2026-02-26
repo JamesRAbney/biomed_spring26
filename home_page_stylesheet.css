@@ -1,11 +1,11 @@
-.text-container{ /*Used in: index*/
+.text-container{ 
   display: flex;
   gap: 18px;
   margin: 14px auto;
         }
 
 
-.Text{ /*Used in: index*/
+.Text{ 
   flex: 1;
   padding: 14px;
   min-height: 140px;
@@ -19,13 +19,13 @@
   
 }
 
-.welcome { /*Used in: index*/
+.welcome { 
   font-size: 20px;
   font-weight: bold; 
 }
 
 
-.BookCover{ /*Used in: index*/
+.BookCover{ 
   flex: 1;
   padding: 14px;
   min-height: 140px;

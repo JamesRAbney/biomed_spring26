@@ -1,47 +1,57 @@
-body{   /*Used in: index, course_materials*/
-  margin: 40px;
+body{   
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #203348;
   background: #ffffff;
   font-size: 18px;
 }
 
-/* Header */
-header{ /*Used in: index, course_materials*/
+/* Top Banner */
+header{ 
   border: 1px solid #c9cfd6;
   overflow: hidden;
 
   background:
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("assets/neuron .jpg"); /* <-- change this path */
+    url("assets/neuron .jpg"); 
   background-size: cover;
   background-position: center;
   padding: 18px 16px 10px;
 
 }
 
+/* Color and Formatting for below tiles*/
 header h1,
-header h2{ /*Used in: index, course_materials*/
+header h2{ 
   margin: 0;
   text-align: center;
   color: #ffffff;
 }
 
-header h1{/*Used in: index, course_materials*/
+/* Banner/Website Title Text ("Introductory Biomedical Imaging") */
+header h1{
   font-size: 30px;
   font-weight: 700;
   letter-spacing: .2px;
 }
 
-header h2{/*Used in: index, course_materials*/
+/* Page Title ("Course Materials, Simulations, etc.")*/
+header h2{
   font-size: 16px;
   font-weight: 600;
   opacity: .95;
   margin-top: 4px;
 }
 
-nav{/*Used in: index, course_materials*/ /*add to one nav?*/
+/* Page Nav Banner */
+nav{
   margin-top: 14px;
+
+  /*  to push side of grey banner box to the edge of the page (no image borders on l or r) */
+  /* use -20px margins on both sides */
+
+  /* margin-left: -20px; */
+  /* margin-right: -20px; */
   background: #e3e6ea;
   border-top: 1px solid rgba(255,255,255,.35);
   padding: 8px 12px;
@@ -49,13 +59,14 @@ nav{/*Used in: index, course_materials*/ /*add to one nav?*/
   font-size: 13px;
 }
 
-nav a{/*Used in: index, course_materials*/
+/* Page Nav Link Formatting */
+nav a{
   color: #1f3a57;
   text-decoration: none;
   padding: 0 8px;
 }
 
-nav a:hover{ color: red;}/*Used in: index, course_materials*/
+nav a:hover{ color: red;}
 
 /* body > h2{
   margin: 22px auto 8px;
@@ -71,25 +82,25 @@ body > h3{
   line-height: 1.35;
 } */
 
-.row{ /*Used in: course_material*/
+.row{ 
   display: flex;
   gap: 18px;
   margin: 14px auto;
-  margin-left:20px;
-  margin-right:20px;
+  margin-left:50px;
+  margin-right:50px;
 }
 
-footer { /*Used in: index, course_materials*/
+footer { 
   font-size: 16px;
-  padding: 20px; 
+  padding: 30px; 
   font-family: 'Times New Roman', Times, serif;
 }
 body > p{ 
   font-size: 14px;
   color: hwb(236 4% 76%);
   line-height: 1.4;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 body > p a{ 
