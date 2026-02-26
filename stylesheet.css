@@ -1,77 +1,4 @@
-
-
-.text-container{
-  display: flex;
-  gap: 18px;
-  margin: 14px auto;
-        }
-
-
-.Text{
-  flex: 1;
-  padding: 14px;
-  min-height: 140px;
-  width: 60%; 
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin: 50; 
-  text-align: justify; 
-  
-  
-}
-
-.welcome { 
-  font-size: 20px;
-  font-weight: bold; 
-}
-
-
-.BookCover{
-  flex: 1;
-  padding: 14px;
-  min-height: 140px;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  img { 
-    margin: 15px;
-    border: 20px solid lightblue; 
-  }
-  #buybook {
-    text-align: center;
-  
-     a {
-      background-color: lightblue;
-      text-align: justify ; 
-      padding: 3px; 
-      border: 5px solid rgb(91, 91, 164); 
-      border-radius: 25px; 
-
-  }
-  }
-}
-
-nav{ 
-    background-color: lightblue;
-    text-align: justify;
-}
-
-
-* { box-sizing: border-box; }
-
-.Intro-Text h3{
-  font-family: Arial, Helvetica, sans-serif;
-  color:#2b3f54;
-  font-size: 14px;
-}
-
-.Intro-Text h2{
-  font-family: Arial, Helvetica, sans-serif;
-  color:#203348;
-}
-
-body{
+body{   /*Used in: index, course_materials*/
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #203348;
@@ -79,52 +6,41 @@ body{
   font-size: 18px;
 }
 
-body > *{
-   width: 100%
-
-  max-width: 920px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Header */
-header{
-  margin-top: 20px;
+header{ /*Used in: index, course_materials*/
   border: 1px solid #c9cfd6;
   overflow: hidden;
 
-}
-
-header h1,
-header h2{
-  margin: 0;
-  text-align: center;
-  color: #ffffff;
-}
-
-header{
   background:
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
     url("assets/neuron .jpg"); /* <-- change this path */
   background-size: cover;
   background-position: center;
   padding: 18px 16px 10px;
+
 }
 
-header h1{
+header h1,
+header h2{ /*Used in: index, course_materials*/
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+header h1{/*Used in: index, course_materials*/
   font-size: 30px;
   font-weight: 700;
   letter-spacing: .2px;
 }
 
-header h2{
+header h2{/*Used in: index, course_materials*/
   font-size: 16px;
   font-weight: 600;
   opacity: .95;
   margin-top: 4px;
 }
 
-nav{
+nav{/*Used in: index, course_materials*/ /*add to one nav?*/
   margin-top: 14px;
   background: #e3e6ea;
   border-top: 1px solid rgba(255,255,255,.35);
@@ -133,15 +49,15 @@ nav{
   font-size: 13px;
 }
 
-nav a{
+nav a{/*Used in: index, course_materials*/
   color: #1f3a57;
   text-decoration: none;
   padding: 0 8px;
 }
 
-nav a:hover{ color: red;}
+nav a:hover{ color: red;}/*Used in: index, course_materials*/
 
-body > h2{
+/* body > h2{
   margin: 22px auto 8px;
   font-size: 22px;
   color: #2b3f54;
@@ -153,67 +69,31 @@ body > h3{
   font-weight: 500;
   color: #3b4b5a;
   line-height: 1.35;
-}
+} */
 
-.row{
+.row{ /*Used in: course_material*/
   display: flex;
   gap: 18px;
   margin: 14px auto;
+  margin-left:20px;
+  margin-right:20px;
 }
 
-.Materials{
-  flex: 1;
-  background: #dbe6f2;        
-  border: 1px solid #c2cfdd;
-  padding: 14px;
-  min-height: 140px;
-
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+footer { /*Used in: index, course_materials*/
+  font-size: 16px;
+  padding: 20px; 
+  font-family: 'Times New Roman', Times, serif;
 }
-
-.Materials h3{
-  margin: 0 0 6px;
-  font-size: 15px;
-}
-
-.Materials h3 a{ 
-  color: #2b5f93;
-  text-decoration: underline;
-}
-
-.Materials p{
-  margin: 0;
-  font-size: 12.5px;
-  line-height: 1.35;
-  color: #2a3a48;
-}
-
-.Materials img{
-  width: 100px;
-  height: 140px;
-  object-fit: cover;
-  border: 1px solid #aab7c6;
-  background: #fff;
-  flex: 0 0 auto;
-}
-
-
-body > p{
+/* body > p{ 
   font-size: 14px;
   color: hwb(236 4% 76%);
   line-height: 1.4;
   margin: 10px auto;
 }
 
-body > p a{
+body > p a{ 
   color: #2b5f93;
-  text-decoration: underline;
-}
+  text-decoration: underline; 
+} */
 
-footer { 
-  font-size: 16px;
-  padding: 20px; 
-  font-family: 'Times New Roman', Times, serif;
-}
+/** { box-sizing: border-box; }*/
