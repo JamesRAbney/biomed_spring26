@@ -58,7 +58,7 @@
 
 /* Material Thumbnail Formatting */
 .Materials img{
-  width: 100px;
+  width: 210px;
   height: 140px;
   object-fit: cover;
   border: 1px solid #aab7c6;
