@@ -1,9 +1,17 @@
 
+/* If we want to change the formatting of the page content */
+.Page-Wrap{
+  margin:auto;
+  max-width: 90%;
+  font-size: 28px;
+}
+
+
 /* Page description text (under "Course Materials") */
 .Intro-Text h3{ 
   font-family: Arial, Helvetica, sans-serif;
   color:#2b3f54;
-  font-size: 14px;
+  font-size: 18px;
   margin-left:50px;
   margin-right:50px;
 }
@@ -37,7 +45,7 @@
 /* Course Material Links/Names */
 .Materials h3{
   margin: 0 0 6px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* Course Material Link Formatting */
@@ -49,15 +57,15 @@
 /* Material Descriptions */
 .Materials p{
   margin: 0;
-  font-size: 12.5px;
+  font-size: 17px;
   line-height: 1.35;
   color: #2a3a48;
 }
 
 /* Material Thumbnail Formatting */
 .Materials img{
-  width: 100px;
-  height: 140px;
+  width: 200px;
+  height: 280px;
   object-fit: cover;
   border: 1px solid #aab7c6;
   background: #fff;
