@@ -1,4 +1,12 @@
 
+/* If we want to change the formatting of the page content (do we need to keep this???) */
+.Page-Wrap{
+  margin:auto;
+  max-width: 90%;
+  font-size: 28px;
+}
+
+
 /* Page description text (under "Course Materials") */
 .Intro-Text h3{ 
   font-family: Arial, Helvetica, sans-serif;
