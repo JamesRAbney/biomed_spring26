@@ -2,6 +2,7 @@
   display: flex;
   gap: 18px;
   margin: 14px auto;
+  align-items: flex-start;
         }
 
 
@@ -13,8 +14,9 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  margin: 50; 
-  text-align: justify; 
+  margin: 50px; 
+  margin-top: 20px;
+  text-align: left; 
   
   
 }
@@ -33,19 +35,26 @@
   gap: 12px;
   align-items: flex-start;
   img { 
-    margin: 15px;
-    border: 20px solid lightblue; 
+    margin: 20px;
+    margin-left: -100px;
+    border: 10px solid lightblue; 
   }
   #buybook {
-    text-align: center;
+    /* text-align: justify; */
   
      a {
       background-color: lightblue;
-      text-align: justify ; 
+      text-align: center ; 
       padding: 3px; 
       border: 5px solid rgb(91, 91, 164); 
       border-radius: 25px; 
 
   }
   }
+}
+
+footer{   
+  color: #203348;
+  font-size: 15px;
+  font-family: sans-serif;
 }
