@@ -29,7 +29,30 @@
   text-decoration: underline;
 }
 
-.Authors img{
+.row-2{
+  display: flex;
+  gap: 18px;
+  margin: 14px auto;
+  margin-left:450px;
+  margin-right:450px;
+}
+
+
+.Images{
+  flex: 1;
+  background: #dbe6f2;
+  border: 1px solid #c2cfdd;
+  padding: 14px;
+  min-height: 100px;
+
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+
+.Images img{
+  margin: auto;
   width: 300px;
   height: 420px;
   object-fit: cover;
@@ -37,4 +60,9 @@
   background: #fff;
   flex: 0 0 auto;
   align-items: center;
+}
+
+
+figcaption {
+    text-align: center;
 }
