@@ -63,7 +63,7 @@ nav{
 nav a{
   color: #1f3a57;
   text-decoration: none;
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
 nav a:hover{ color: red;}
