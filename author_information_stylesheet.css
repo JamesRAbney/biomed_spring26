@@ -13,7 +13,7 @@
 
   display: flex;
   gap: 12px;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 /* Authors Descriptions */
@@ -30,39 +30,52 @@
 }
 
 .row-2{
-  display: flex;
   gap: 18px;
-  margin: 14px auto;
-  margin-left:450px;
-  margin-right:450px;
+  margin: 10px auto;
+  max-width: 500px;
+  column-count: 2;
 }
 
-
+/*First image column*/
 .Images{
-  flex: 1;
   background: #dbe6f2;
   border: 1px solid #c2cfdd;
-  padding: 14px;
+  padding: 5px;
   min-height: 100px;
-
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  gap: 14px;
 }
 
+/*Second image column*/
+.Images-2{
+  background: #dbe6f2;
+  border: 1px solid #c2cfdd;
+  padding: 5px;
+  min-height: 100px;
+  gap: 14px;
+}
 
 .Images img{
-  margin: auto;
-  width: 300px;
-  height: 420px;
+  display: block;
+  margin: 5px auto;
+  width: 155px;
+  height: 215px;
   object-fit: cover;
   border: 1px solid #aab7c6;
   background: #fff;
-  flex: 0 0 auto;
-  align-items: center;
+}
+
+.Images-2 img{
+  display: block;
+  margin: 5px auto;
+  width: 155px;
+  height: 215px;
+  object-fit: cover;
+  border: 1px solid #aab7c6;
+  background: #fff;
 }
 
 
 figcaption {
     text-align: center;
+    font-size: 12px;
 }
