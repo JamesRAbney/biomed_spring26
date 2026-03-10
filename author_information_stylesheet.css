@@ -32,9 +32,9 @@
 .row-2{
   gap: 18px;
   margin: 10px auto;
-  margin-left:450px;
-  margin-right:450px;
-  max-width: 500px;
+  margin-left:500px;
+  margin-right:500px;
+  max-width: 250px;
   /* column-count: 2; */
 }
 
