@@ -64,9 +64,9 @@
 
 /* Material Thumbnail Formatting */
 .Materials img{
-  width: 100px;
-  height: 140px;
-  object-fit: cover;
+  max-width: 150px;
+  max-height: 210px;
+  object-fit: scale-down;         
   border: 1px solid #aab7c6;
   background: #fff;
   flex: 0 0 auto;
