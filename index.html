@@ -40,6 +40,8 @@
                 </div>
         </div> |
         <a href="author_information.html">Author Information</a>
+        |
+        <a href="https://blog.introbiomedicalimaging.org/"> Blog</a>
     </nav>
 </header>
 
@@ -99,6 +101,43 @@
         </figure>
         </div>
         </div>
+<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+
+<div id="blog-container">
+<script>
+  const client = contentful.createClient({
+    space: '7kezgsnv995m',
+    environment: 'master',
+    accessToken: 'Gpr3eGQwrz_6VJ_jbPxBuzSys4fQvCTWXFlcPfKmj24',
+  });
+
+  client.getEntries({
+    content_type: 'blogPost',
+    limit: 5,
+    order: '-sys.createdAt'
+  })
+  .then((response) => {
+    console.log(response.items[0].fields);
+    const container = document.getElementById('blog-container');
+
+    response.items.forEach((entry) => {
+      const title = entry.fields.title;
+      const slug = entry.fields.slug;
+      const imageUrl = 'https:' + entry.fields.images.fields.file.url;
+
+      const card = document.createElement('a');
+      card.href = `https://blog.introbiomedicalimaging.org/posts/${slug}`;
+      card.innerHTML = `
+        <img src="${imageUrl}" alt="${title}" />
+        <h3>${title}</h3>
+      `;
+      container.appendChild(card);
+    });
+  })
+  .catch((error) => console.error('Contentful error:', error));
+</script>
+</div>
+
 </body>
 
 <footer>
