@@ -70,6 +70,12 @@
   color: #2a3a48;
 }
 
+/* Course Bulletpoint Link Formatting */
+.Materials li a{ 
+  color: #2b5f93;
+  text-decoration: underline;
+}
+
 /* Material Thumbnail Formatting */
 .Materials img{
   max-width: 150px;
