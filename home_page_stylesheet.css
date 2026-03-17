@@ -77,7 +77,7 @@ footer{
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  height: 200px;
+  max-height: 200px;
 }
 
 #blog-container a.blog-card {
