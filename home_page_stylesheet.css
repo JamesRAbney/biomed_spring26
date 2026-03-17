@@ -77,13 +77,13 @@ footer{
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+  height: 200px;
 }
 
 #blog-container a.blog-card {
   display: block;
   width: 100%;
   max-width: 420px;
-  height: 200px;
   box-sizing: border-box;
   color: inherit;
   text-decoration: none;
