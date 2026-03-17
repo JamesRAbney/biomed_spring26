@@ -106,40 +106,55 @@
         </div>
 
 <div id="blog-container">
+  <p>Loading blog posts...</p>
+</div>
 
 <script>
   async function loadPosts() {
+    const container = document.getElementById("blog-container");
+
     try {
       const res = await fetch("/api/posts");
       const data = await res.json();
 
+      console.log("status:", res.status);
+      console.log("data:", data);
+
       if (!res.ok) {
-        throw new Error(data.error || "Failed to load posts");
+        container.innerHTML = `<p>Failed to load posts: ${data.error || "Unknown error"}</p>`;
+        return;
       }
 
-      const container = document.getElementById("blog-container");
+      if (!data.posts || data.posts.length === 0) {
+        container.innerHTML = "<p>No blog posts found.</p>";
+        return;
+      }
+
       container.innerHTML = "";
 
       data.posts.forEach((post) => {
         const card = document.createElement("a");
         card.href = post.url;
+        card.className = "blog-card";
+
         card.innerHTML = `
           <div class="blog-entries">
-            ${post.imageUrl ? `<img src="${post.imageUrl}" alt="${post.title}" />` : ""}
+            ${post.imageUrl ? `<img src="${post.imageUrl}" alt="${post.title}">` : ""}
             <h3>${post.title}</h3>
             <p>${post.summary}</p>
           </div>
         `;
+
         container.appendChild(card);
       });
     } catch (error) {
       console.error("Blog load error:", error);
+      container.innerHTML = "<p>Unable to load blog posts.</p>";
     }
   }
 
   loadPosts();
 </script>
-</div>
 
 </body>
 
