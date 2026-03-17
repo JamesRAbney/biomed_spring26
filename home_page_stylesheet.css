@@ -71,4 +71,5 @@ footer{
 #blog-container a.blog-card * {
   color: inherit;
   text-decoration: none;
+  max-width: 300px;
 }
