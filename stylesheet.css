@@ -131,34 +131,6 @@ body > p a{
   text-decoration: none;
   display: block;
 }
-/* 
-.sub-dropbtn{
-  background-color: #e3e6ea;
-  color: #1f3a57;
-  border: none;
-  width: 100%;
-  font-size:13px
-}
-
-.sub-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.sub-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #e3e6ea;
-  min-width: 86px;
-  z-index: 2;
-}
-
-.sub-dropdown-content a {
-  color: #1f3a57;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-} */
 
 #blog-container{
   display: flex;
