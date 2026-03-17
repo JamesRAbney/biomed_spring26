@@ -115,7 +115,16 @@
 
     try {
       const res = await fetch("/api/posts");
-      const data = await res.json();
+      const text = await res.text();
+
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        console.error("Raw /api/posts response:", text);
+        container.innerHTML = "<p>Server returned a non-JSON error.</p>";
+        return;
+      }
 
       console.log("status:", res.status);
       console.log("data:", data);
