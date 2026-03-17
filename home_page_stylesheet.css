@@ -58,6 +58,32 @@ footer{
   font-size: 15px;
   font-family: sans-serif;
 }
+#blog-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#blog-container a.blog-card,
+#blog-container a.blog-card:visited,
+#blog-container a.blog-card:hover,
+#blog-container a.blog-card:active {
+  display: flex;
+  width: 100%;
+  max-width: 420px;
+  min-height: 260px;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#blog-container a.blog-card * {
+  color: inherit;
+  text-decoration: none;
+}
+
 #blog-container .blog-entries {
   display: flex;
   flex-direction: row;
@@ -68,19 +94,19 @@ footer{
 }
 
 #blog-container .blog-image {
-  flex: 1.4;   /* increase this to make image wider */
-  min-width: 160px;
+  flex: 0 0 48%;   /* makes image section wider */
   overflow: hidden;
 }
 
 #blog-container .blog-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
 }
 
 #blog-container .blog-text {
   flex: 1;
   padding: 16px;
+  box-sizing: border-box;
 }
