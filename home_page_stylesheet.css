@@ -45,8 +45,8 @@
      a {
       background-color: lightblue;
       text-align: center ; 
-      padding: 3px; 
-      border: 5px solid rgb(91, 91, 164); 
+      padding: 7px; 
+      border: 2px solid rgb(91, 91, 164); 
       border-radius: 25px; 
 
   }
@@ -57,4 +57,18 @@ footer{
   color: #203348;
   font-size: 15px;
   font-family: sans-serif;
+}
+
+#blog-container a.blog-card,
+#blog-container a.blog-card:visited,
+#blog-container a.blog-card:hover,
+#blog-container a.blog-card:active {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+#blog-container a.blog-card * {
+  color: inherit;
+  text-decoration: none;
 }

@@ -1,0 +1,8 @@
+{
+  "name": "biomed-site",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "contentful": "^11.4.4"
+  }
+}
