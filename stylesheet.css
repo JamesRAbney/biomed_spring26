@@ -43,6 +43,14 @@ header h2{
   margin-top: 4px;
 }
 
+.subheader h2{
+  font-size: 14px;
+  font-weight: 500;
+  opacity: .95;
+  margin-top: 4px;
+  font-style: italic;
+}
+
 /* Page Nav Banner */
 nav{
   margin-top: 14px;
