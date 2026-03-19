@@ -17,7 +17,6 @@ header{
   background-size: cover;
   background-position: center;
   padding: 18px 16px 10px;
-
 }
 
 /* Color and Formatting for below tiles*/
@@ -58,11 +57,15 @@ header h2{
 
 
 .menu-container{
-  width:120%;
   margin-left:-20%;
+  margin-right:-20%;
+  padding-right:20%;
   padding-left:20%;
   margin-bottom: -29px;
   background-color: #e3e6ea;
+  height: 55px;
+
+
 }
 
 
@@ -71,7 +74,8 @@ ul.navigation {
   padding: 0;
   text-align: center;
   display: flex;
-  
+  justify-content: center;
+
   
 }
 
@@ -91,7 +95,8 @@ ul.navigation li > ul {
   left: 0;
   width: 130px;
   padding: 0;
-  z-index: 100000;
+  z-index: 10;
+  overflow-y: visible;
 }
 
 ul.navigation li a {
@@ -108,8 +113,11 @@ ul.navigation li:hover a {
 
 ul.navigation li:hover > ul {
   display: block;
-  top: 100px;
-  position: fixed;
+  top: 0px;
+  position: relative;
+    height: 100px;
+
+
 }
 
 ul.navigation li:hover > ul li {
@@ -169,7 +177,6 @@ ul.navigation li.dropdown li.dropdown:hover:before {
 
 
 
-
 .row{ 
   display: flex;
   gap: 18px;
@@ -189,6 +196,7 @@ body > p{
   line-height: 1.4;
   margin-left: 50px;
   margin-right: 50px;
+  z-index: 1;
 }
 
 body > p a{ 
