@@ -17,7 +17,8 @@ async function loadLocalJson() {
 
 async function getUrl() {  
   const data = await loadLocalJson();
-  const myClassList = ["link_syllabus", "link_materials"];  
+  //const myClassList = ["link_syllabus", "link_lecture_notes"];  
+  const myClassList = Object.keys(data);  
 
   for (const my_class of myClassList){
     const elements = document.getElementsByClassName(my_class);
