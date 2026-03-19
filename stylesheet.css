@@ -43,30 +43,132 @@ header h2{
   margin-top: 4px;
 }
 
-/* Page Nav Banner */
-nav{
-  margin-top: 14px;
 
-  /*  to push side of grey banner box to the edge of the page (no image borders on l or r) */
-  /* use -20px margins on both sides */
 
-  /* margin-left: -20px; */
-  /* margin-right: -20px; */
-  background: #e3e6ea;
-  border-top: 1px solid rgba(255,255,255,.35);
-  padding: 8px 12px;
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-container{
+  width:120%;
+  margin-left:-20%;
+  padding-left:20%;
+  margin-bottom: -29px;
+  background-color: #e3e6ea;
+}
+
+
+ul.navigation {
+  list-style: none;
+  padding: 0;
   text-align: center;
+  display: flex;
+  
+  
+}
+
+ul.navigation li {
+  position: relative;
+  display: block;
   font-size: 13px;
+  padding-left: 0.3%;
+  padding-right:0.3%;
+
 }
 
-/* Page Nav Link Formatting */
-nav a{
-  color: #1f3a57;
+ul.navigation li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 130px;
+  padding: 0;
+  z-index: 100000;
+}
+
+ul.navigation li a {
   text-decoration: none;
-  padding: 0 10px;
+  color: #203348;
+  background: #e3e6ea;
+  padding: 10px 20px;
+  display: block;
 }
 
-nav a:hover{ color: red;}
+ul.navigation li:hover a {
+  color: red;
+}
+
+ul.navigation li:hover > ul {
+  display: block;
+  top: 100px;
+  position: fixed;
+}
+
+ul.navigation li:hover > ul li {
+  width: 100%;
+}
+
+ul.navigation li:hover ul ul {
+  left: 100%;
+  top: 0;
+}
+
+ul.navigation li ul li:hover > a {
+  background: #e3e6ea;
+  color: red;
+}
+
+ul.navigation li.dropdown:before {
+  content: "";
+  border: 5px solid transparent;
+  border-top-color: #e3e6ea;
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ul.navigation li:hover:before {
+  border-top-color: #e3e6ea;;
+}
+
+ul.navigation li.dropdown li.dropdown:before {
+  border-top-color: #e3e6ea;;
+}
+
+ul.navigation li.dropdown li.dropdown:hover:before {
+  border-top-color: #e3e6ea;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .row{ 
   display: flex;
@@ -93,44 +195,6 @@ body > p a{
   color: #2b5f93;
   text-decoration: underline; 
 } 
-
- /* Dropdown Button */
-.dropbtn {
-  background-color: #e3e6ea;
-  color: #1f3a57;
-  border: none;
-}
-
-.dropbtn a{
-  color: #1f3a57;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.dropbtn a:hover{ color: red;}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: static;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #e3e6ea;
-  min-width: 86px;
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: #1f3a57;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
 #blog-container{
   display: flex;
