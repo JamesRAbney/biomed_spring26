@@ -16,20 +16,19 @@ async function loadLocalJson() {
 }
 
 async function getUrl() {  
-  const syllabus = document.getElementById("syllabus");
   const data = await loadLocalJson();
+  const myClassList = ["link_syllabus", "link_materials"];  
 
-  if (!syllabus) {
-    console.error("No element with id='syllabus'");
-    return;
-  }
-
-  if (!data) {
-    console.error("Could not load JSON data");
-    return;
-  }
-
-  syllabus.href = data.syllabus;
+  for (const my_class of myClassList){
+    const elements = document.getElementsByClassName(my_class);
+        if (!elements) {
+        console.error(`No elements with class=${my_class}`);
+        return;
+    }
+    for (let element of elements){
+        element.href = data[my_class];
+    }
+  }  
 }
 
 window.addEventListener("DOMContentLoaded", getUrl);
