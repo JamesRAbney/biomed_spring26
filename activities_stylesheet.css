@@ -1,0 +1,87 @@
+
+/* If we want to change the formatting of the page content (do we need to keep this???) */
+.Page-Wrap{
+  margin:auto;
+  max-width: 90%;
+  font-size: 18px;
+}
+
+
+/* Page description text (under "Lecture Notes") */
+.Intro-Text h3{ 
+  font-family: Arial, Helvetica, sans-serif;
+  color:#2b3f54;
+  font-size: 16px;
+  margin-left:50px;
+  margin-right:50px;
+}
+
+/* "Lecture Notes" page title text */
+.Intro-Text h2{  
+  font-family: Arial, Helvetica, sans-serif;
+  color:#203348;
+  margin-left:30px;
+  margin-right:30px;
+}
+
+/* Row Boxes */
+.Materials{ 
+  flex: 1;
+  background: #dbe6f2;        
+  border: 1px solid #c2cfdd;
+  padding: 14px;
+  min-height: 140px;
+
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Lecture Notes Link Formatting */
+.Materials h3 a{ 
+  color: #2b5f93;
+  text-decoration: underline;
+}
+
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-family: Arial, sans-serif; 
+  font-size: 16px; 
+  margin: 30px;
+}
+
+th { 
+  background-color: #8ea1bc; 
+  color: #1e293b; 
+  border: 1px solid #111316; 
+  padding: 8px; text-align: center; 
+} 
+
+td { 
+  border: 1px solid #111316; 
+  background: #dbe6f2;  
+  padding: 6px 10px; 
+  vertical-align: top; 
+} 
+
+.center-col { 
+  text-align: center; 
+  width: 8%; 
+}
+
+.date-col { 
+  width: 12%; 
+} 
+
+.topic-col { 
+  width: 70%; 
+} 
+
+a { 
+  color: #2a3a48;; /* Matches the red/orange links in the image */ 
+  text-decoration: underline; 
+}
+
+
