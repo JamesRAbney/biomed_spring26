@@ -5,6 +5,7 @@
     <title> Biomed </title>
     <link href="stylesheet.css" rel="stylesheet">
     <link href="lecture_notes_stylesheet.css" rel="stylesheet">
+    <script src="api/url.js"></script>
 </head>
 <header>
     <h1>Introductory Biomedical Imaging</h1>
@@ -18,13 +19,13 @@
             <button class="dropbtn"><a href="course_materials.html">Course Materials</a></button>
                 <div class="dropdown-content">
                     <a href="course_materials.html"><strong>Course Materials</strong></a>
-                    <a href="assets/course_materials/syllabus/Physics_390-Syllabus_SP26.pdf">Syllabus</a>
+                    <a class="link_syllabus" href="#">Syllabus</a>
                     <a href="lecture_notes.html">Lecture Notes</a>
                     <a href="course_materials.html">PowerPoint Slides</a>
                     <a href="activities.html">In-Class Activities</a>
                     <a href="course_materials.html">Course Reviews</a> 
                     <a href="course_materials.html">Practice Examinations</a>
-                    <a href="assets/course_materials/IntroductoryBiomedicalImaging-Homework_Files.zip">Homework Materials</a>
+                    <a class="link_homework_zip" href="#">Homework Materials</a>
                 </div>
         </div> |
         <div class="dropdown">
@@ -83,47 +84,47 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">1</a></td><td class="date-col">1/21/26</td><td>Course mechanics, overview of course subject matter</td><td class="center-col">1</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">2</a></td><td>1/23/26</td><td>Light waves and rays, ray bending at interfaces, Snell’s law, lens function, ray diagrams</td><td class="center-col">2</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">3</a></td><td>1/26/26</td><td>Image quality, geometrical optics versus wave optics, diffraction</td><td class="center-col">3</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_04_SP26.pdf">4</a></td><td>1/28/26</td><td>Ray tracing, real and virtual images, minification and magnification, lens equations, Activity 1</td><td class="center-col">3</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_05_SP26.pdf">5</a></td><td>1/30/26</td><td>Simple microscope, ray diagram, eyepiece, objective, critical and Kohler illumination</td><td class="center-col">3</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_06_SP26.pdf">6</a></td><td>2/2/26</td><td>Resolution, diffraction, Rayleigh theory, Activity 2, numerical aperture</td><td class="center-col">4</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_07_SP26.pdf">7</a></td><td>2/4/26</td><td>Abbe theory (start)</td><td class="center-col">4</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">8</a></td><td>2/6/26</td><td>Abbe theory (finish), Activity 3, introduction to contrast</td><td class="center-col">4,5</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_09_SP26.pdf">9</a></td><td>2/9/26</td><td>Amplitude and phase specimens, brightfield microscopy, tricks to enhance contrast, Kohler ray trace, conjugate planes, Activity 4, darkfield microscopy (start)</td><td class="center-col">5</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_10_SP26.pdf">10</a></td><td>2/11/26</td><td>Darkfield microscopy (finish), phase contrast microscopy (start)</td><td class="center-col">5</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_11_SP26.pdf">11</a></td><td>2/13/26</td><td>Phase contrast microscopy (continued)</td><td class="center-col">5</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_12_SP26.pdf">12</a></td><td>2/16/26</td><td>Phase contrast microscopy (finish), Activity 5, introduction to fluorescence, overview of fluorescence microscopy, Jablonski diagram</td><td class="center-col">5,6</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_13_SP26.pdf">13</a></td><td>2/18/26</td><td>Fluorescence excitation and emission, photons, quantification of light energy</td><td class="center-col">6</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_14_SP26.pdf">14</a></td><td>2/20/26</td><td>Excitation, emission, spectra, fluorescence microscope (light source, emission filter, dichromatic mirror, stage, emission filter, detector), Activity 6, multi-color imaging</td><td class="center-col">6</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_01" href="#">1</a></td><td class="date-col">1/21/26</td><td>Course mechanics, overview of course subject matter</td><td class="center-col">1</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_02" href="#">2</a></td><td>1/23/26</td><td>Light waves and rays, ray bending at interfaces, Snell’s law, lens function, ray diagrams</td><td class="center-col">2</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_03" href="#">3</a></td><td>1/26/26</td><td>Image quality, geometrical optics versus wave optics, diffraction</td><td class="center-col">3</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_04" href="#">4</a></td><td>1/28/26</td><td>Ray tracing, real and virtual images, minification and magnification, lens equations, Activity 1</td><td class="center-col">3</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_05" href="#">5</a></td><td>1/30/26</td><td>Simple microscope, ray diagram, eyepiece, objective, critical and Kohler illumination</td><td class="center-col">3</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_06" href="#">6</a></td><td>2/2/26</td><td>Resolution, diffraction, Rayleigh theory, Activity 2, numerical aperture</td><td class="center-col">4</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_07" href="#">7</a></td><td>2/4/26</td><td>Abbe theory (start)</td><td class="center-col">4</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_08" href="#">8</a></td><td>2/6/26</td><td>Abbe theory (finish), Activity 3, introduction to contrast</td><td class="center-col">4,5</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_09" href="#">9</a></td><td>2/9/26</td><td>Amplitude and phase specimens, brightfield microscopy, tricks to enhance contrast, Kohler ray trace, conjugate planes, Activity 4, darkfield microscopy (start)</td><td class="center-col">5</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_10" href="#">10</a></td><td>2/11/26</td><td>Darkfield microscopy (finish), phase contrast microscopy (start)</td><td class="center-col">5</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_11" href="#">11</a></td><td>2/13/26</td><td>Phase contrast microscopy (continued)</td><td class="center-col">5</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_12" href="#">12</a></td><td>2/16/26</td><td>Phase contrast microscopy (finish), Activity 5, introduction to fluorescence, overview of fluorescence microscopy, Jablonski diagram</td><td class="center-col">5,6</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_13" href="#">13</a></td><td>2/18/26</td><td>Fluorescence excitation and emission, photons, quantification of light energy</td><td class="center-col">6</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_14" href="#">14</a></td><td>2/20/26</td><td>Excitation, emission, spectra, fluorescence microscope (light source, emission filter, dichromatic mirror, stage, emission filter, detector), Activity 6, multi-color imaging</td><td class="center-col">6</td></tr>
         
-        <tr><td class="center-col"><a href="assets/lecture_notes/">15</a></td><td>2/23/26</td><td>Dichromatic mirrors for multi-color imaging, 3D imaging, optical sectioning, blur problem, introduction to confocal microscopy</td><td class="center-col">6</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_16_SP26.pdf">16</a></td><td>2/25/26</td><td>Blur problem, point spread function (PSF), laser scanning confocal microscopy (LSCM), pinhole size</td><td class="center-col">6</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">17</a></td><td>2/27/26</td><td>Spinning disk confocal microscopy (SDCM), Nipkow disk, camera, comparison of LSCM and SDCM</td><td class="center-col">6</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">18</a></td><td>3/2/26</td><td>Widefield fluorescence microscopy, deconvolution, polarization microscopy, Activity 7, crossed polarizers</td><td class="center-col">5,6</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/Physics_390-Lecture_19_SP26.pdf">19</a></td><td>3/4/26</td><td>Specialized fluorescence techniques (overview), two-photon microscopy (start)</td><td class="center-col">7</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">20</a></td><td>3/6/26</td><td>Two-photon microscopy (finish), total internal reflection fluorescence microscopy (TIRFM) (start)</td><td class="center-col">7</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">21</a></td><td>3/9/26</td><td>Total internal reflection fluorescence microscopy (finish), super-resolution fluorescence microscopy (overview), structured illumination microscopy (SIM) (start), moiré patterns</td><td class="center-col">7,8</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">22</a></td><td>3/11/26</td><td>Structured illumination microscopy (finish), beats, photoactivatable localization microscopy (PALM) (start)</td><td class="center-col">8</td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">23</a></td><td>3/13/26</td><td>Photoactivatable localization microscopy (finish), stimulated emission depletion (STED) microscopy</td><td class="center-col">8</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_15" href="#">15</a></td><td>2/23/26</td><td>Dichromatic mirrors for multi-color imaging, 3D imaging, optical sectioning, blur problem, introduction to confocal microscopy</td><td class="center-col">6</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_16" href="#">16</a></td><td>2/25/26</td><td>Blur problem, point spread function (PSF), laser scanning confocal microscopy (LSCM), pinhole size</td><td class="center-col">6</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_17" href="#">17</a></td><td>2/27/26</td><td>Spinning disk confocal microscopy (SDCM), Nipkow disk, camera, comparison of LSCM and SDCM</td><td class="center-col">6</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_18" href="#">18</a></td><td>3/2/26</td><td>Widefield fluorescence microscopy, deconvolution, polarization microscopy, Activity 7, crossed polarizers</td><td class="center-col">5,6</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_19" href="#">19</a></td><td>3/4/26</td><td>Specialized fluorescence techniques (overview), two-photon microscopy (start)</td><td class="center-col">7</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_20" href="#">20</a></td><td>3/6/26</td><td>Two-photon microscopy (finish), total internal reflection fluorescence microscopy (TIRFM) (start)</td><td class="center-col">7</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_21" href="#">21</a></td><td>3/9/26</td><td>Total internal reflection fluorescence microscopy (finish), super-resolution fluorescence microscopy (overview), structured illumination microscopy (SIM) (start), moiré patterns</td><td class="center-col">7,8</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_22" href="#">22</a></td><td>3/11/26</td><td>Structured illumination microscopy (finish), beats, photoactivatable localization microscopy (PALM) (start)</td><td class="center-col">8</td></tr>
+        <tr><td class="center-col"><a class="link_lecture_23" href="#">23</a></td><td>3/13/26</td><td>Photoactivatable localization microscopy (finish), stimulated emission depletion (STED) microscopy</td><td class="center-col">8</td></tr>
         
-        <tr><td class="center-col"><a href="assets/lecture_notes/">24</a></td><td>3/16/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">25</a></td><td>3/18/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">26</a></td><td>3/20/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">27</a></td><td>3/30/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">28</a></td><td>4/1/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">29</a></td><td>4/3/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">30</a></td><td>4/6/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">31</a></td><td>4/8/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">32</a></td><td>4/13/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">33</a></td><td>4/15/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">34</a></td><td>4/17/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">35</a></td><td>4/20/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">36</a></td><td>4/22/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">37</a></td><td>4/24/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">38</a></td><td>4/27/26</td><td></td><td></td></tr>
-        <tr><td class="center-col"><a href="assets/lecture_notes/">39</a></td><td>4/29/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_24" href="#">24</a></td><td>3/16/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_25" href="#">25</a></td><td>3/18/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_26" href="#">26</a></td><td>3/20/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_27" href="#">27</a></td><td>3/30/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_28" href="#">28</a></td><td>4/1/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_29" href="#">29</a></td><td>4/3/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_30" href="#">30</a></td><td>4/6/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_31" href="#">31</a></td><td>4/8/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_32" href="#">32</a></td><td>4/13/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_33" href="#">33</a></td><td>4/15/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_34" href="#">34</a></td><td>4/17/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_35" href="#">35</a></td><td>4/20/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_36" href="#">36</a></td><td>4/22/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_37" href="#">37</a></td><td>4/24/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_38" href="#">38</a></td><td>4/27/26</td><td></td><td></td></tr>
+        <tr><td class="center-col"><a class="link_lecture_39" href="#">39</a></td><td>4/29/26</td><td></td><td></td></tr>
     </tbody>
 </table>
 
