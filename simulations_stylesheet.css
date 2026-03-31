@@ -79,6 +79,7 @@
 /* Material Thumbnail Formatting */
 .Materials img{
   max-width: 150px;
+  min-width: 150px;
   max-height: 210px;
   object-fit: scale-down;         
   border: 1px solid #aab7c6;
