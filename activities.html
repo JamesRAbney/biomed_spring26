@@ -5,6 +5,7 @@
     <title> Biomed </title>
     <link href="stylesheet.css" rel="stylesheet">
     <link href="activities_stylesheet.css" rel="stylesheet">
+    <script src="api/url.js"></script>
 </head>
 <header>
     <h1>Introductory Biomedical Imaging</h1>
@@ -18,13 +19,13 @@
             <button class="dropbtn"><a href="course_materials.html">Course Materials</a></button>
                 <div class="dropdown-content">
                     <a href="course_materials.html"><strong>Course Materials</strong></a>
-                    <a href="assets/course_materials/syllabus/Physics_390-Syllabus_SP26.pdf">Syllabus</a>
+                    <a class="link_syllabus" href="#">Syllabus</a>
                     <a href="lecture_notes.html">Lecture Notes</a>
                     <a href="course_materials.html">PowerPoint Slides</a>
                     <a href="activities.html">In-Class Activities</a>
                     <a href="course_materials.html">Course Reviews</a> 
                     <a href="course_materials.html">Practice Examinations</a>
-                    <a href="assets/course_materials/IntroductoryBiomedicalImaging-Homework_Files.zip">Homework Materials</a>
+                    <a class="link_homework_zip" href="#">Homework Materials</a>
                 </div>
         </div> |
         <div class="dropdown">
@@ -77,21 +78,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_1_KEY.pdf">1</a></td><td class="date-col">1/26/26</td><td>Microscopy: Virtual Image Formation</td><td class="center-col">3</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_2_KEY.pdf">2</a></td><td>2/2/26</td><td>Microscopy: Diffraction-Limited Resolution – Rayleigh’s Angular Version</td><td class="center-col">4</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_3_KEY.pdf">3</a></td><td>2/6/26</td><td>Microscopy: Abbe Theory</td><td class="center-col">4</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_4_KEY.pdf">4</a></td><td>2/9/26</td><td>Microscopy: Kohler Illumination</td><td class="center-col">3</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_5_KEY.pdf">5</a></td><td>2/16/26</td><td>Microscopy: Brightfield and Phase Contrast</td><td class="center-col">5</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_6_KEY.pdf">6</a></td><td>2/20/26</td><td>Microscopy: Designing a Multi-Color Imaging Experiment</td><td class="center-col">6</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_7_KEY.pdf">7</a></td><td>2/4/26</td><td>Microscopy: Polarization</td><td class="center-col">5</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/Physics390_Activity_8_KEY.pdf">8</a></td><td>3/16/26</td><td>Microscopy: Review</td><td class="center-col">3-8</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/">9</a></td><td>3/20/26</td><td>Ultrasound: The 13-Microsecond Rule</td><td class="center-col">10</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/">10</a></td><td> </td><td>Radiography: Contrast Agents</td><td class="center-col">11</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/">11</a></td><td> </td><td>Radiography: Back Projection</td><td class="center-col">11</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/">12</a></td><td> </td><td>Radionuclide Imaging: Iterative Reconstruction</td><td class="center-col">12</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/">13</a></td><td> </td><td>MRI: Magnetic Fields and Resonance</td><td class="center-col">13</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/">14</a></td><td> </td><td>MRI: Slice Selection</td><td class="center-col">13</td></tr>
-        <tr><td class="center-col"><a href="assets/activities/">15</a></td><td> </td><td>MRI: Signal Amplitude</td><td class="center-col">13</td></tr>
+        <tr><td class="center-col"><a class="link_activity_01" href="#">1</a></td><td class="date-col">1/26/26</td><td>Microscopy: Virtual Image Formation</td><td class="center-col">3</td></tr>
+        <tr><td class="center-col"><a class="link_activity_02" href="#">2</a></td><td>2/2/26</td><td>Microscopy: Diffraction-Limited Resolution – Rayleigh’s Angular Version</td><td class="center-col">4</td></tr>
+        <tr><td class="center-col"><a class="link_activity_03" href="#">3</a></td><td>2/6/26</td><td>Microscopy: Abbe Theory</td><td class="center-col">4</td></tr>
+        <tr><td class="center-col"><a class="link_activity_04" href="#">4</a></td><td>2/9/26</td><td>Microscopy: Kohler Illumination</td><td class="center-col">3</td></tr>
+        <tr><td class="center-col"><a class="link_activity_05" href="#">5</a></td><td>2/16/26</td><td>Microscopy: Brightfield and Phase Contrast</td><td class="center-col">5</td></tr>
+        <tr><td class="center-col"><a class="link_activity_06" href="#">6</a></td><td>2/20/26</td><td>Microscopy: Designing a Multi-Color Imaging Experiment</td><td class="center-col">6</td></tr>
+        <tr><td class="center-col"><a class="link_activity_07" href="#">7</a></td><td>2/4/26</td><td>Microscopy: Polarization</td><td class="center-col">5</td></tr>
+        <tr><td class="center-col"><a class="link_activity_08" href="#">8</a></td><td>3/16/26</td><td>Microscopy: Review</td><td class="center-col">3-8</td></tr>
+        <tr><td class="center-col"><a class="link_activity_09" href="#">9</a></td><td>3/20/26</td><td>Ultrasound: The 13-Microsecond Rule</td><td class="center-col">10</td></tr>
+        <tr><td class="center-col"><a class="link_activity_10" href="#">10</a></td><td> </td><td>Radiography: Contrast Agents</td><td class="center-col">11</td></tr>
+        <tr><td class="center-col"><a class="link_activity_11" href="#">11</a></td><td> </td><td>Radiography: Back Projection</td><td class="center-col">11</td></tr>
+        <tr><td class="center-col"><a class="link_activity_12" href="#">12</a></td><td> </td><td>Radionuclide Imaging: Iterative Reconstruction</td><td class="center-col">12</td></tr>
+        <tr><td class="center-col"><a class="link_activity_13" href="#">13</a></td><td> </td><td>MRI: Magnetic Fields and Resonance</td><td class="center-col">13</td></tr>
+        <tr><td class="center-col"><a class="link_activity_14" href="#">14</a></td><td> </td><td>MRI: Slice Selection</td><td class="center-col">13</td></tr>
+        <tr><td class="center-col"><a class="link_activity_15" href="#">15</a></td><td> </td><td>MRI: Signal Amplitude</td><td class="center-col">13</td></tr>
         
     </tbody>
 </table>
