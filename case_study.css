@@ -1,6 +1,11 @@
-h1, h2, h3, p { 
+ h1 {
     margin-left:50px;
+ }
+ h2, h3{ 
+    margin-left:50px;
+    text-decoration: underline;
 }
+
 .caseContent > p {
     font-size: 18px;
 }
@@ -21,5 +26,43 @@ h1, h2, h3, p {
     margin: 20px;}
 }
 img {      
-  border: 10px solid #c2cfdd;
+  border: 20px solid #c2cfdd;
+}
+.ImageAcq {
+  flex: 1;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-left: 250px;
+  img{ 
+    max-height: 500px;
+    margin-left: 50px ;
+  }
+}
+
+.radiographs  { 
+  
+  flex: 1;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  figure {
+  text-align: center;
+}
+
+    figcaption {
+    margin-top: 8px; 
+    }
+
+    
+    div img { 
+        max-width: 500px;
+    }
+    .ventrodorsal{
+    img {
+        max-height:700px;
+    }
+}
 }
