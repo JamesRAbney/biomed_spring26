@@ -5,76 +5,104 @@
     <title> Biomed </title>
     <link href="stylesheet.css" rel="stylesheet">
     <link href="course_materials_stylesheet.css" rel="stylesheet">
-    <script src="api/url.js"></script>
+    <script src="js/url.js"></script>
 </head>
-<header>
-    <h1>Introductory Biomedical Imaging</h1>
-    <h2>Case Studies</h2>
-    <nav class="links">
-        <a href="index.html">Home</a> |
-                <div class="dropdown">
-            <button class="dropbtn"><a href="course_materials.html">Course Materials</a></button>
-                <div class="dropdown-content">
-                    <a href="course_materials.html"><strong>Course Materials</strong></a>
-                    <a class="link_syllabus" href="#">Syllabus</a>
-                    <a href="lecture_notes.html">Lecture Notes</a>
-                    <a href="course_materials.html">PowerPoint Slides</a>
-                    <a href="activities.html">In-Class Activities</a>
-                    <a href="course_materials.html">Course Reviews</a> 
-                    <a href="course_materials.html">Practice Examinations</a>
-                    <a class="link_homework_zip" href="#">Homework Materials</a>
-                </div>
-        </div> |
-        <div class="dropdown">
-            <button class="dropbtn"><a href="case_studies.html">Case Studies</a></button>
-                <div class="dropdown-content">
-                    <a href="case_studies.html"><strong>Case Studies</strong></a>
-                    <a href="case_studies.html">Ultrasound/X-Ray</a>
-                    <a href="case_studies.html">Colonoscopy</a>
-                    <a href="case_studies.html">CT Scan</a>
-                    <a href="case_studies.html">Magnetic Resonance Imaging</a>
-                </div>
-        </div>  |
-        <div class="dropdown">
-            <button class="dropbtn"><a href="simulations.html">Simulations</a></button>
-            
-                <div class="dropdown-content">
-                    <a href="simulations.html"><strong>Simulations</strong></a>
-                    <a href="simulation_ultrasound.html">Ultrasound Simulations</a>
-                    <a href="simulation_xray.html">X-Ray Simulations</a>
-                    <a href="simulation_radionuclide.html">Radionuclide Simulations</a>
-                    <a href="simulation_magnetic.html">MRI Simulations</a>
-                </div>
-        </div> |
-        <a href="author_information.html">Author Information</a>
-        |
-        <a href="https://blog.introbiomedicalimaging.org/"> Blog</a>
-    </nav>
-</header>
 <body>
+<header>
+        <h1>Introductory Biomedical Imaging</h1>
+        <h2>Bethe A. Scalettar & James R. Abney</h2>
+        <br>
+    </header>
+        <div class="menu-container">
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li> 
+            <li class="dropdown"><a href="course_materials.html">Course Materials</a> 
+            <ul>
+                <li><a href="course_materials.html">Course Materials</a></li>
+                <li><a href="course_materials.html"><b>Course Materials</b></a></li>
+                <li><a href="assets/course_materials/syllabus/Physics_390-Syllabus_SP26.pdf">Syllabus</a></li>
+                <li><a href="lecture_notes.html">Lectures Notes</a></li>
+                <li class="dropdown"><a href="#">Powerpoint Slides</a>
+                <ul>
+                    <li><a href="assets/course_materials/slides/Powerpoint_Slides_Microscopy.pdf">Microscopy</a></li>
+                    <li><a href="assets/course_materials/slides/Medical_PPTs_Version1.pdf">Medical Imaging</a></li>
+                    <li><a href="assets/course_materials/slides/DIP_PPTs_Version1.pdf">Digital Image Processing</a></li>
+                </ul>
+                </li>
+                <li><a href="activities.html">In-Class Activities</a></li>
+                <li class="dropdown"><a href="#">Course Reviews</a>
+                <ul>
+                    <li><a href="assets/course_materials/review/Review_Microscopy.pdf">Review of Microscopy</a></li>
+                    <li><a href="assets/course_materials/review/Review_Medical.pdf">Review of Medical Imaging</a></li>
+                    <li><a href="assets/course_materials/review/Review_Digital.pdf">Review Digital Image Processing</a></li>
+                </ul>
+                </li>
+                <li class="dropdown"><a href="#">Practice Examinations</a>
+                <ul>
+                    <li><a href="assets/course_materials/practice_exams/Physics390-Practice_Midterm_SP26.pdf">Practice Midterm</a></li>
+                    <li><a href="assets/course_materials/practice_exams/Physics390-Practice-Final_SP25.pdf">Practice Final</a></li>
+                </ul>
+                </li>
+                <li><a href="assets/course_materials/IntroductoryBiomedicalImaging-Homework_Files.zip">Homework Materials</a></li>
+            </ul>
+            </li>
+            <li class="dropdown"><a href="case_studies.html"><new>Case Studies</new></a>
+            <ul>
+                <li><a href="case_studies.html">Case Studies</a></li>
+                <li><a href="case_studies.html"><b>Case Studies</b></a></li>
+                <li><a href="#">Ultrasound/X-Ray</a></li>
+                <li><a href="#">Colonoscopy</a></li>
+                <li><a href="#">CT Scan</a></li>
+                <li><a href="#">Magnetic Resonance Imaging</a></li>
+            </ul>
+            </li> 
+            <li class="dropdown"><a href="simulations.html">Simulations</a>
+            <ul>
+                <li><a href="simulations.html">Simulations</a></li>
+                <li><a href="simulation_ultrasound.html">Ultrasound Simluations</a></li>
+                <li><a href="simulation_xray.html">X-Ray Simulations</a></li>
+                <li><a href="simulation_radionuclide.html">Radionuclide Simulations</a></li>
+                <li><a href="simulation_magnetic.html">MRI Simulations</a></li>
+            </ul>
+            </li>
+            <li><a href="author_information.html">Author Information</a></li>
+            <li><a href="https://blog.introbiomedicalimaging.org/">Blog</a></li>
+        </ul>
+        </div>
     
     <section class="Intro-Text">
         <h2>Case Studies</h2>
-        <h3>This page will include a set of “case studies” involving specific imaging modes. We will think of catchy names
-    and descriptions for each and will include context for each and a description of the results. We anticipate
-    adding case studies as they become available (probably starting with an MRI study). Clicking on the overviews
-    below will take users to a new page dedicated to the case study. </h3>   
+        <h3>Introductory Biomedical Imaging is focused on principles and practices that underlie the
+creation of quality biomedical images. However, the creation of images is only the beginning.
+Decisions about what images to create and, more particularly, what interpretation to attach to
+those images can require years of additional training in biology and medicine. The following
+“case studies” explore real-life medical imaging cases involving the authors, their families, and
+their pets. These case studies are intended to exemplify the breadth and prevalence of medical
+imaging and to provide context for the simulations that appear elsewhere on this website.  </h3>   
     </section>
     
     <div class="row">
         <div class="Materials">
-             <img src="" alt="...">
+             <img src="assets/case_studies/case_study1/CaseStudy1 (Thumbnail).jpg" alt="UltrasoundImage">
             <div>
-            <h3> <a href="">Ultrasound/X-Ray</a> </h3>
-            <p> Intro text </p>
+            <h3> <a href="case_study1.html">Case Study 1:</a><br>Veterinary Examination</h3>
+            <p> This study describes a visit to a
+        veterinary specialist with a cat
+        suffering from small cell
+        lymphoma. The visit included
+        both X-ray and ultrasound
+        examinations. </p>
             </div>
             
         </div>
         <div class="Materials">
-            <img src="" alt="...">
+            <img src="assets/case_studies/case_study2/CaseStudy2 (Thumbnail).jpg" alt="...">
             <div>
-            <h3> <a href="">Colonoscopy</a> </h3>
-            <p> Intro text. </p>
+            <h3> <a href="case_study2.html">Case Study 2:</a><br>EDG and Colonoscopy</h3>
+            <p> This study describes a visit to
+the hospital for a routine
+esophagogastroduodenoscopy
+(EGD) and colonoscopy. </p>
             </div>
         </div>
     </div>
@@ -82,15 +110,20 @@
         <div class="Materials">
            <img src="" alt="...">
            <div>
-            <h3> <a href="">CT Scan</a> </h3>
-            <p> Intro text. </p>
+            <h3> <a href="case_study3.html">Case Study 3:</a><br>Lumbar Spine MRI</h3>
+            <p> This study describes an MRI
+examination of the lumbar
+spine used to identify the
+source(s) of lower back and leg
+pain and to suggest treatment
+options. </p>
             </div>
     
         </div>
         <div class="Materials">
             <img src="" alt="...">
             <div>
-            <h3> <a href="">Magnetic Resonance Imaging</a> </h3>
+            <h3> <a href="">Case Study 4:</a><br>Case study title</h3>
             <p> Intro text </p>
             </div>
         </div>
