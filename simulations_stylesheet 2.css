@@ -1,0 +1,88 @@
+
+/* If we want to change the formatting of the page content (do we need to keep this???) */
+.Page-Wrap{
+  margin:auto;
+  max-width: 90%;
+  font-size: 18px;
+}
+
+
+/* Page description text (under "Course Materials") */
+.Intro-Text h3{ 
+  font-family: Arial, Helvetica, sans-serif;
+  color:#2b3f54;
+  font-size: 14px;
+  margin-left:50px;
+  margin-right:50px;
+}
+
+/* "Course Materials" page title text */
+.Intro-Text h2{  
+  font-family: Arial, Helvetica, sans-serif;
+  color:#203348;
+  margin-left:30px;
+  margin-right:30px;
+}
+
+/* "Student/Teaching Materials" header */
+.Section-Header{
+    margin-left:50px
+}
+
+/* Row Boxes */
+.Materials{ 
+  flex: 1;
+  background: #dbe6f2;        
+  border: 1px solid #c2cfdd;
+  padding: 14px;
+  min-height: 140px;
+
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Course Material Links/Names */
+.Materials h3{
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+/* Course Material Link Formatting */
+.Materials h3 a{ 
+  color: #2b5f93;
+  text-decoration: underline;
+}
+
+/* Material Descriptions */
+.Materials p{
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: #2a3a48;
+}
+
+/* Material Bulletpoints */
+.Materials li{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.35;
+  color: #2a3a48;
+}
+
+/* Course Bulletpoint Link Formatting */
+.Materials li a{ 
+  color: #2b5f93;
+  text-decoration: underline;
+}
+
+/* Material Thumbnail Formatting */
+.Materials img{
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 210px;
+  object-fit: scale-down;         
+  border: 1px solid #aab7c6;
+  background: #fff;
+  flex: 0 0 auto;
+}
