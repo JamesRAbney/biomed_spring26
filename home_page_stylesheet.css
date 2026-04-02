@@ -36,11 +36,12 @@
   align-items: flex-start;
   img { 
     margin: 20px;
-    margin-left: -100px;
+    margin-left: -90px;
     border: 10px solid lightblue; 
   }
-  #buybook {
-    /* text-align: justify; */
+}
+
+  .Buybook {
   
      a {
       background-color: lightblue;
@@ -48,10 +49,8 @@
       padding: 7px; 
       border: 2px solid rgb(91, 91, 164); 
       border-radius: 25px; 
-
   }
   }
-}
 
 footer{   
   color: #203348;
