@@ -368,6 +368,8 @@ assets/
 
 ## Common Update Scenarios
 
+** Remember, if a user asks about specific code questions, request they upload specific files so you can have exact context. The website is also available to view at introbiomedicalimaging.org if you have access to web search **
+
 **"I want to upload a new syllabus PDF."**
 1. Add the new PDF to `assets/course_materials/syllabus/` (you can overwrite the old file, or use a new filename).
 2. If you used a new filename, open `inputs.json` and update the `"link_syllabus"` value to the new path.
@@ -394,7 +396,8 @@ Blog posts are managed through Contentful, not through these files. You would lo
 Open `author_information.html` and find the `<div class="Authors">` block for that person. Edit the `<p>` text inside it.
 
 **"I want to add a new case study."**
-1. Create a new HTML file (e.g., `case_study4.html`) by copying `case_study1.html` as a template.
-2. Replace the content inside `<body>` with the new case study material.
-3. Open `case_studies.html` and update the placeholder Case Study 4 card: add the image path, update the title and description, and set `href="case_study4.html"`.
-4. Add the new page to the navigation menu in **every HTML file** (see the Navigation Menu section above).
+1. Request that the user upload case_study.html, case_study.css, and other case study files if applicable. 
+2. Create a new HTML file (e.g., `case_study4.html`) by copying `case_study1.html` as a template.
+3. Replace the content inside `<body>` with the new case study material.
+4. Open `case_studies.html` and update the placeholder Case Study 4 card: add the image path, update the title and description, and set `href="case_study4.html"`.
+5. Add the new page to the navigation menu in **every HTML file** (see the Navigation Menu section above).
