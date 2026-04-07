@@ -1,17 +1,19 @@
- h1 {
+body h1 {
     margin-left:50px;
  }
- h2, h3{ 
+
+h2, h3 { 
     margin-left:50px;
     text-decoration: underline;
+    }
+header > h2{ 
+    text-decoration: none
 }
 
 .caseContent > p {
     font-size: 18px;
 }
-.ImageAcq > img{ 
-    max-height: 200px;
-}
+
 .RangerUltrasound > img { 
   flex: 1;
   padding: 14px;
@@ -29,16 +31,29 @@ img {
   border: 20px solid #c2cfdd;
 }
 .ImageAcq {
-  flex: 1;
+  flex: 1; 
   padding: 14px;
   display: flex;
   gap: 12px;
-  align-items: flex-start;
-  margin-left: 250px;
+  align-items: center;
+  margin-left:150px; 
+  
   img{ 
     max-height: 500px;
-    margin-left: 50px ;
   }
+  figcaption{ 
+    font-size: 15px;
+    text-align: justify;
+    
+  }
+  figure {
+  display: table;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom; 
+}
 }
 
 .radiographs  { 
