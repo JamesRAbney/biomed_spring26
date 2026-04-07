@@ -23,9 +23,10 @@ header > h2{
   align-items: flex-start;
   
 }
-.RangerUltrasound{ 
+.rowFormat{ 
     img{width: 350px;
-    margin: 20px;}
+    margin: 20px, 40px, 0px, 40px;
+    }
 }
 img {      
   border: 20px solid #c2cfdd;
@@ -49,11 +50,13 @@ img {
   figure {
   display: table;
 }
-
 figcaption {
   display: table-caption;
   caption-side: bottom; 
 }
+}
+.caption > p{ 
+    text-align: center;
 }
 
 .radiographs  { 
