@@ -55,6 +55,11 @@ figcaption {
   caption-side: bottom; 
 }
 }
+
+.caption img{ 
+    min-height: 275px;
+}
+
 .caption > p{ 
     text-align: center;
 }
@@ -80,7 +85,8 @@ figcaption {
     }
     .ventrodorsal{
     img {
-        max-height:700px;
+      min-height: 716px;  
+      max-height:716px;
     }
 }
 }
