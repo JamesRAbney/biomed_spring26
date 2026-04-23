@@ -10,6 +10,32 @@ You are helping a **non-technical user** make updates to a course website for "I
 - Keep explanations concise — one or two sentences of context, then the specific steps.
 - If a change involves uploading a new PDF or image, tell the user the correct folder to place the file in, and what the filename should match.
 
+### Flagging Major Changes Back to This Document
+
+This guide is a **static snapshot** of the site as of the last time it was updated. It will drift out of date as changes are made.
+
+If the user's change is **major** — meaning something future sessions would be misled without — proactively offer at the end of your response: *"This is a structural change to the site. Would you like me to generate an updated `AI_support.md` for you to download and replace the current one?"* If they say yes, rewrite the relevant sections of this document (keeping everything else intact) and deliver it as a new file.
+
+**What counts as major** (offer an update):
+- A new top-level page is added or an existing one is removed (e.g., a new case study HTML file is created, a simulation sub-page is split, a whole new section is added to the site)
+- The navigation menu structure changes (new top-level item, dropdown restructured, Blog link moved/removed)
+- The link-injection system changes (new keys added to `inputs.json`, `js/url.js` logic modified, a new central config file is introduced)
+- A previously-stub or placeholder page is built out (e.g., when `case_study4.html` is eventually created)
+- Asset folder structure changes (new top-level folder under `assets/`, or a whole case study / simulation folder is added or renamed)
+- A file listed in this guide is renamed or deleted
+- A new shared pattern is introduced (e.g., a second dynamic-link registry, a new stylesheet used by multiple pages, a new API endpoint)
+
+**What does NOT count as major** (do not offer an update):
+- Swapping out a PDF while keeping the same filename
+- Editing text inside an existing paragraph, table cell, or bio
+- Adding or removing a single lecture / activity row
+- Changing a thumbnail image
+- Adjusting CSS colors, fonts, spacing, or padding
+- Fixing a typo
+- Updating a date
+
+When in doubt, err on the side of offering — the user can always say no. Do not update this document silently or without asking; always let the user decide whether to regenerate it.
+
 ### Requesting Files from the User
 
 This guide gives you the structure and purpose of every file, but **you do not have the actual file contents** unless the user uploads them. Follow these rules:
@@ -32,10 +58,12 @@ This guide gives you the structure and purpose of every file, but **you do not h
 | Adding/editing a lecture row or topic | `lecture_notes.html` |
 | Adding/editing an activity row | `activities.html` |
 | Editing a case study's text or images | `case_study1.html`, `case_study2.html`, or `case_study3.html` |
+| Creating the not-yet-built Case Study 4 page | `case_study1.html` (as a template) |
+| Editing the case studies overview (cards/grid) | `case_studies.html` |
 | Editing a simulation description | `simulation_ultrasound.html`, `simulation_xray.html`, `simulation_radionuclide.html`, or `simulation_magnetic.html` |
-| Updating an author bio | `author_information.html` |
+| Updating an author bio or developer credits | `author_information.html` |
 | Changing colors, fonts, or layout | The relevant CSS file (see Stylesheets section) |
-| Changing the navigation menu | Every `.html` file (all 13 pages share a copy) |
+| Changing the navigation menu (including the Blog link or dropdown items) | Every `.html` file (all 13 pages share a copy) |
 
 ---
 
@@ -43,7 +71,7 @@ This guide gives you the structure and purpose of every file, but **you do not h
 
 This is a **static HTML website** — meaning it is made of simple text files (.html, .css) that a browser reads directly. There is no database or complex backend. Most updates involve editing one of the HTML files or replacing a file in the `assets/` folder.
 
-The one exception is the **blog feed** on the home page, which pulls live posts from an external service called Contentful.
+The one exception is the **blog feed** on the home page, which pulls live posts from an external service called Contentful. A separate blog site lives at `blog.introbiomedicalimaging.org` and is linked from the navigation menu on every page.
 
 The site has the following main sections, each with its own HTML page:
 
@@ -53,16 +81,19 @@ The site has the following main sections, each with its own HTML page:
 | Course Materials | `course_materials.html` | Syllabus, slides, reviews, practice exams, homework |
 | Lecture Notes | `lecture_notes.html` | Table of all 39 lectures with dates and topics |
 | In-Class Activities | `activities.html` | Table of all 15 activities with dates and topics |
-| Case Studies | `case_studies.html` | Overview page linking to individual case studies |
-| Case Study 1 | `case_study1.html` | Veterinary exam (X-ray & ultrasound of Ranger the cat) |
-| Case Study 2 | `case_study2.html` | EGD and colonoscopy (currently a stub — no body content yet) |
-| Case Study 3 | `case_study3.html` | Lumbar spine MRI (currently a stub — no body content yet) |
+| Case Studies | `case_studies.html` | Overview page linking to the four individual case studies |
+| Case Study 1 | `case_study1.html` | Veterinary examination (X-ray & ultrasound of Ranger the cat) |
+| Case Study 2 | `case_study2.html` | EGD and colonoscopy — full write-up with image galleries |
+| Case Study 3 | `case_study3.html` | Eye Examinations and Eyeglass Prescriptions (astigmatism, hyperopia, myopia, presbyopia) |
+| Case Study 4 | `case_study4.html` | Lumbar Spine MRI — **page not yet created**; a card and thumbnail already exist on the overview page and the nav link points here, but the HTML file itself is missing |
 | Simulations | `simulations.html` | Overview of all four simulation suites |
 | Ultrasound Simulations | `simulation_ultrasound.html` | 8 ultrasound simulation entries |
 | X-Ray Simulations | `simulation_xray.html` | 6 X-ray/CT simulation entries |
 | Radionuclide Simulations | `simulation_radionuclide.html` | 6 nuclear medicine simulation entries |
 | MRI Simulations | `simulation_magnetic.html` | 7 MRI simulation entries |
-| Author Information | `author_information.html` | Bios for authors, illustrator, and web developers |
+| Author Information | `author_information.html` | Bios for authors, illustrator, and the student web development team |
+
+> **Note on the HTML file count:** The navigation menu lists Case Study 4, but `case_study4.html` does not yet exist in the repository. There are currently **13 HTML files** on disk — when Case Study 4 is built, that number will become 14.
 
 ---
 
@@ -94,7 +125,7 @@ Teaching materials include: Homework Materials (a .zip file), and a note about t
 There is also an Errata link at the bottom of the page.
 
 **Common updates:**
-- To swap out any PDF (e.g., a new syllabus) → replace the corresponding file in `assets/course_materials/` and update the link in `inputs.json` (see below)
+- To swap out any PDF (e.g., a new syllabus) → replace the corresponding file in `assets/course_materials/` and update the link in `inputs.json` (see below). **Also update the hardcoded path in the navigation menu** — see the Navigation Menu section for why.
 - To change description text for a material → find the matching `<p>` tag inside the relevant `<div class="Materials">` block
 - To add a new material card → copy an existing `<div class="Materials">` block and fill in the new title, description, and link
 
@@ -122,19 +153,19 @@ Displays a table of all 15 in-class activities. Same structure as `lecture_notes
 ---
 
 ### `case_studies.html` — Case Studies Overview Page
-Shows a 2×2 grid of case study cards, each with a thumbnail image, title, and short description, linking to the individual case study pages.
+Shows a 2×2 grid of case study cards, each with a thumbnail image, title, and short description, linking to the individual case study pages. All four cards are fully populated with thumbnails, titles, and descriptions.
 
-Case Study 4 is currently a placeholder — the card exists but its link is empty (`href=""`).
+The Case Study 4 card links to `case_study4.html`, which **does not yet exist**. The card itself is complete (thumbnail, title "Lumbar Spine MRI", and description), but the link is currently broken until the HTML page is created.
 
 **Common updates:**
 - To update a case study description → find the matching `<div class="Materials">` block and edit the `<p>` text
-- To add a thumbnail image for Case Study 3 or 4 → add the image to `assets/case_studies/case_study3/` or `case_study4/` and update the `<img src="...">` in this file
-- To link Case Study 4 to a real page → create the page and add its filename to `<a href="...">`
+- To swap a thumbnail image → replace the image in the corresponding `assets/case_studies/case_studyX/` folder (and update the `<img src="...">` if the filename changes)
+- To activate the Case Study 4 link → create `case_study4.html` (see Common Update Scenarios below)
 
 ---
 
 ### `case_study1.html` — Case Study 1: Veterinary Examination
-The most fully developed case study page. Contains written descriptions of X-ray and ultrasound examinations of Ranger the cat, along with a gallery of the actual X-ray radiographs and ~20 ultrasound images.
+The first fully developed case study page. Contains written descriptions of X-ray and ultrasound examinations of Ranger the cat, along with a gallery of the X-ray radiographs and ~20 captioned ultrasound images.
 
 Images are stored in `assets/case_studies/case_study1/`.
 
@@ -145,14 +176,32 @@ Images are stored in `assets/case_studies/case_study1/`.
 ---
 
 ### `case_study2.html` — Case Study 2: EGD and Colonoscopy
-Currently a stub. The page has the header, navigation menu, and the `<h1>` title, but the `<body>` has no content yet.
+A fully developed case study page. Contains an introduction about gastrointestinal health, a detailed EGD (esophagogastroduodenoscopy) section with 6 endoscopic images, and a colonoscopy section with 3 tool/workplace photos and 6 additional endoscopic images (including polyp findings).
 
-**To add content:** Edit this file and add text and/or images inside the `<body>` tag, following the same structure as `case_study1.html`.
+Images are stored in `assets/case_studies/case_study2/`. Filenames follow patterns like `20250911_EGD_View_2.JPG` and `20250911_CS_View_1.jpg`.
+
+**Common updates:**
+- To update the narrative text → edit the `<p>` text blocks inside `<body class="caseContent">`
+- To add or replace images → add the new image to `assets/case_studies/case_study2/` and update the matching `<img src="...">` tag inside the `<section class="rowFormat">` blocks
+- To change a caption → edit the `<p>` inside the `<div class="caption">` wrapper
 
 ---
 
-### `case_study3.html` — Case Study 3: Lumbar Spine MRI
-Currently a stub. Same situation as `case_study2.html` — header and title exist, but no body content.
+### `case_study3.html` — Case Study 3: Eye Examinations and Eyeglass Prescriptions
+A fully developed case study page covering three common vision impairments — **astigmatism, hyperopia (farsightedness), and myopia (nearsightedness)** — with a side discussion of presbyopia. Each condition gets its own section with a diagram explaining the optics, followed by a section on eye examinations and how eyeglass prescriptions are written (Sphere, Cylinder, Axis, Add). The page closes with two real prescription images — one hyperopic and one myopic — with written interpretations.
+
+Images are stored in `assets/case_studies/case_study3/`. Filenames include `CS3 - Eye_Diagrams.jpg`, `CS3 - Astigmatism_Diagrams.jpg`, `CS3 - Hyperopia_Diagrams.jpg`, `CS3 - Myopia_Diagrams.jpg`, `CS3 - Hyperopia_Prescription.jpg`, and `CS3 - Myopia_Prescription.jpg`.
+
+**Common updates:**
+- To update the narrative text → edit the `<p>` text blocks inside `<body class="caseContent">`
+- To replace a diagram → swap the file in `assets/case_studies/case_study3/` keeping the same filename, or update the `<img src="...">` inside the matching `<div class="eyes">` block
+
+---
+
+### `case_study4.html` — Case Study 4: Lumbar Spine MRI *(not yet created)*
+This page **does not exist in the repository yet**. The navigation menu on every page links to it and the Case Study 4 card on `case_studies.html` points to it, so those links are currently broken. When the user is ready to build this page, follow the steps under "I want to add a new case study" in Common Update Scenarios below — use `case_study1.html` as a template, save the new file as `case_study4.html`, and the existing link will start working automatically.
+
+The thumbnail for this case study is already in place at `assets/case_studies/case_study4/CS4 - Lumbar_Spine_MRI (Thumbnail).jpg`.
 
 ---
 
@@ -197,24 +246,46 @@ Contains biographical paragraphs for:
 - **Bethe A. Scalettar** (author, professor at Lewis & Clark)
 - **James R. Abney** (author, IP attorney)
 - **Cyan Cowap** (illustrator)
-- The **website development team**
+- The **website development team** — currently credited as "Ishan Abraham, Niyati Bishop, Felix Gibeault, Idalyne Giron Castillo, and Grace Wiseman" (computer science students in Peter Drake's Software Development class)
 
 Also displays two fluorescence microscopy images in `assets/author_info/`.
 
 **Common updates:**
 - To update a bio → find the matching `<div class="Authors">` block and edit the `<p>` text
 - To update an email or website link → find the `<a href="mailto:...">` or `<a href="https://...">` within that bio block
+- To update the developer credits → edit the `<p>` inside the "About the Website Developers" `<div class="Authors">` block
 - To add a photo → add the image file to `assets/author_info/` and reference it in a new `<div class="Images">` block
 
 ---
 
 ## The Navigation Menu
 
-The navigation menu appears on **every page** of the site. However, it is **not stored in a single shared file** — it is copied into each HTML file individually. This means if you need to add a new item to the menu, you must edit every single HTML page.
+The navigation menu appears on **every page** of the site. However, it is **not stored in a single shared file** — it is copied into each HTML file individually. This means if you need to add a new item to the menu (or change an existing one), you must edit every single HTML page.
 
 The menu is the `<ul class="navigation">` block inside `<div class="menu-container">`. All 13 HTML files contain this same block.
 
-On each page, the currently active section is highlighted in red using a `<new>` tag (e.g., `<new>Course Materials</new>`).
+### Structure
+
+The menu uses **dropdown sub-menus**. The top-level items are:
+
+1. **Home** → `index.html`
+2. **Course Materials** (dropdown) → main page + direct links to Syllabus PDF, Lecture Notes page, PowerPoint Slides (nested sub-menu with 3 PDFs), In-Class Activities, Course Reviews (nested sub-menu with 3 PDFs), Practice Examinations (nested sub-menu with 2 PDFs), and Homework Materials ZIP
+3. **Case Studies** (dropdown) → main page + links to all four case studies (Veterinary Examination, EDG and Colonoscopy, Eye Examinations and Eyeglass Prescriptions, Lumbar Spine MRI)
+4. **Simulations** (dropdown) → main page + links to the four simulation sub-pages
+5. **Author Information** → `author_information.html`
+6. **Blog** → external link to `https://blog.introbiomedicalimaging.org/`
+
+On each page, the currently active top-level item is highlighted in red using a `<new>` tag (e.g., `<new>Course Materials</new>`).
+
+### Important: Course Materials dropdown uses hardcoded paths
+
+The PDF links inside the **Course Materials dropdown** (Syllabus, PowerPoint Slides, Course Reviews, Practice Examinations, Homework Materials) are **hardcoded directly into the nav menu of every HTML file**. They do NOT go through `inputs.json`.
+
+This means: if the user renames or moves one of these PDFs (e.g., the syllabus), they must update it in **two places**:
+1. `inputs.json` (so the main Course Materials page card still works)
+2. The nav menu inside **every HTML file** (so the dropdown link still works)
+
+When asked to swap out any of the PDFs that appear in both places, always remind the user of this two-step update.
 
 ---
 
@@ -223,7 +294,7 @@ On each page, the currently active section is highlighted in red using a `<new>`
 ### `inputs.json` — Central Link Registry
 This is the most important file for managing downloadable content. It stores all the file paths for PDFs and other linked documents as key-value pairs. The JavaScript file `js/url.js` reads this file on page load and automatically inserts the correct `href` into any HTML element whose `class` name matches a key in this file.
 
-**Example:** If you want to update the syllabus PDF, change the value for `"link_syllabus"` in `inputs.json`. You do not need to touch any HTML file.
+**Example:** If you want to update the syllabus PDF, change the value for `"link_syllabus"` in `inputs.json`. This updates the link on the Course Materials card automatically — but note that the Syllabus link in the nav dropdown is separate and hardcoded (see Navigation Menu section).
 
 Keys in `inputs.json` and what they control:
 
@@ -281,7 +352,7 @@ CSS files control the visual appearance of the site — colors, fonts, spacing, 
 
 | File | What It Styles |
 |---|---|
-| `stylesheet.css` | **Global styles** shared by all pages: header banner, navigation menu, footer, blog cards on the home page, and the basic `.row` layout grid |
+| `stylesheet.css` | **Global styles** shared by all pages: header banner, navigation menu (including dropdowns), footer, blog cards on the home page, and the basic `.row` layout grid |
 | `home_page_stylesheet.css` | Home page–specific styles: the text/book-cover two-column layout, the "WELCOME" heading, "Order" buttons, and the blog card layout |
 | `course_materials_stylesheet.css` | Styles for `course_materials.html` and `case_studies.html`: the `.Materials` card boxes, section headers, thumbnail images, and text formatting |
 | `lecture_notes_stylesheet.css` | Styles for `lecture_notes.html`: the lecture table (column widths, header colors, row formatting) |
@@ -289,7 +360,7 @@ CSS files control the visual appearance of the site — colors, fonts, spacing, 
 | `simulations_stylesheet.css` | Styles for `simulations.html` and the simulation sub-pages: same `.Materials` card layout, adapted for wider thumbnails |
 | `sims_stylesheet.css` | An additional stylesheet for simulation sub-pages (loaded by `simulation_*.html`): controls `.Materials` card sizing with different thumbnail dimensions |
 | `author_information_stylesheet.css` | Styles for `author_information.html`: the `.Authors` bio boxes, the two-column image layout (`.row-2`), and image sizing |
-| `case_study.css` | Styles for `case_study1.html`, `case_study2.html`, `case_study3.html`: headings, image galleries (`.radiographs`, `.RangerUltrasound`, `.ImageAcq`), and image borders |
+| `case_study.css` | Styles for `case_study1.html`, `case_study2.html`, `case_study3.html`: headings, image galleries (`.radiographs`, `.RangerUltrasound`, `.rowFormat`, `.caption`, `.eyes`, `.list`), and image borders |
 
 ---
 
@@ -301,7 +372,7 @@ All static files (images, PDFs, ZIP) live inside the `assets/` folder:
 assets/
 ├── home/
 │   └── bookCover.jpg                        ← Book cover image on home page
-├── neuron .jpg / neuron .tif                ← Background image for the site header banner
+├── neuron .jpg                              ← Background image for the site header banner
 ├── 20260319_Textbook_Errata.pdf             ← Textbook errata document
 ├── Physics_390-Lecture_18_SP26.pdf          ← (Loose file — likely a test/temporary upload)
 │
@@ -349,8 +420,24 @@ assets/
 │   │   ├── CS1 - US_Gel.jpg                  ← Ultrasound setup photo
 │   │   ├── CS1 - US_Image_Acquisition.jpg    ← Ultrasound acquisition photo
 │   │   └── CS1 - US_Image_02.jpg through CS1 - US_Image_21.jpg  ← 20 ultrasound images
-│   └── case_study2/
-│       └── CaseStudy2 (Thumbnail).jpg
+│   ├── case_study2/
+│   │   ├── CaseStudy2 (Thumbnail).jpg         ← Older thumbnail (still on disk)
+│   │   ├── CaseStudy2_thumbnail.jpg           ← Current thumbnail used on overview page
+│   │   ├── 20250911_EGD_View_2.JPG through _View_7.JPG  ← 6 EGD endoscope images
+│   │   ├── 20250911_CS_View_1.jpg, _2, _5, _6, _8, _9    ← 6 colonoscopy images
+│   │   ├── CS2_Workplace.jpeg                 ← Workplace photo
+│   │   ├── CS2_Doctors_Tool_Kit.jpg           ← Doctor's tool kit
+│   │   └── CS2_Patients_Tool_Kit.jpg          ← Patient's tool kit
+│   ├── case_study3/
+│   │   ├── CS3 - Eye_Examinations (Thumbnail).jpg    ← Overview thumbnail
+│   │   ├── CS3 - Eye_Diagrams.jpg             ← Anatomy & ray diagram
+│   │   ├── CS3 - Astigmatism_Diagrams.jpg
+│   │   ├── CS3 - Hyperopia_Diagrams.jpg
+│   │   ├── CS3 - Myopia_Diagrams.jpg
+│   │   ├── CS3 - Hyperopia_Prescription.jpg   ← Real hyperopic prescription
+│   │   └── CS3 - Myopia_Prescription.jpg      ← Real myopic prescription
+│   └── case_study4/
+│       └── CS4 - Lumbar_Spine_MRI (Thumbnail).jpg    ← Overview thumbnail (page not yet built)
 │
 ├── sims/
 │   ├── sim_main/                             ← Thumbnails for simulations.html overview cards
@@ -373,6 +460,7 @@ assets/
 **"I want to upload a new syllabus PDF."**
 1. Add the new PDF to `assets/course_materials/syllabus/` (you can overwrite the old file, or use a new filename).
 2. If you used a new filename, open `inputs.json` and update the `"link_syllabus"` value to the new path.
+3. **Also** update the hardcoded syllabus path in the **navigation menu** of every HTML file (search for `Physics_390-Syllabus_SP26.pdf` — it appears in the `<li><a href="assets/course_materials/syllabus/...">Syllabus</a></li>` line of the Course Materials dropdown, and you'll need to update it in all 13 HTML files).
 
 **"I want to add a new lecture note (e.g., Lecture 24)."**
 1. Add the PDF to `assets/lecture_notes/` — name it following the existing pattern (e.g., `Physics_390-Lecture_24_SP26.pdf`).
@@ -384,20 +472,28 @@ assets/
 2. Find the row with `link_lecture_24` (search for "link_lecture_24") and edit the text in the adjacent `<td>` cell.
 
 **"I want to change the color of the navigation bar."**
-Open `stylesheet.css` and look for `.menu-container` — change its `background-color` value.
+Open `stylesheet.css` and look for `.menu-container` — change its `background-color` value. Dropdown styling also lives in `stylesheet.css` under `.dropdown` selectors.
 
 **"I want to change the header background image."**
 Open `stylesheet.css`, find the `header` block, and change the `url("assets/neuron .jpg")` reference to a different image file.
 
 **"I want to add a new blog post."**
-Blog posts are managed through Contentful, not through these files. You would log in to the Contentful platform for `blog.introbiomedicalimaging.org` to create a new post.
+Blog posts are managed through Contentful, not through these files. You would log in to the Contentful platform for `blog.introbiomedicalimaging.org` to create a new post. The nav bar link to the blog is fixed and does not need to change.
 
-**"I want to update an author bio."**
-Open `author_information.html` and find the `<div class="Authors">` block for that person. Edit the `<p>` text inside it.
+**"I want to update an author bio or the list of website developers."**
+Open `author_information.html` and find the `<div class="Authors">` block for that person (or for the development team). Edit the `<p>` text inside it.
 
-**"I want to add a new case study."**
-1. Request that the user upload case_study.html, case_study.css, and other case study files if applicable. 
-2. Create a new HTML file (e.g., `case_study4.html`) by copying `case_study1.html` as a template.
-3. Replace the content inside `<body>` with the new case study material.
-4. Open `case_studies.html` and update the placeholder Case Study 4 card: add the image path, update the title and description, and set `href="case_study4.html"`.
-5. Add the new page to the navigation menu in **every HTML file** (see the Navigation Menu section above).
+**"I want to build out Case Study 4 (Lumbar Spine MRI)."**
+The overview card and nav link for Case Study 4 already exist — only the HTML page is missing.
+1. Request that the user upload `case_study1.html` and `case_study.css` so you can match the style.
+2. Create a new file named `case_study4.html` by copying `case_study1.html` as a template.
+3. Replace the `<h2>Case Study 1</h2>` header text with `<h2>Case Study 4</h2>`, and update the `<h1>` inside `<body class="caseContent">` to the new title.
+4. Replace the content inside `<body class="caseContent">` with the Lumbar Spine MRI narrative and image galleries.
+5. Place any MRI images in `assets/case_studies/case_study4/` alongside the existing thumbnail.
+6. No changes to `case_studies.html` or the navigation menu are needed — both already point at `case_study4.html`.
+
+**"I want to add a fifth case study."**
+1. Create the new HTML file (e.g., `case_study5.html`) by copying `case_study1.html` as a template.
+2. Add a new card to `case_studies.html` by copying an existing `<div class="Materials">` block inside the grid and updating the thumbnail path, title, description, and `<a href="case_study5.html">`.
+3. Add the new page to the **Case Studies dropdown** in the navigation menu in **every HTML file** (see the Navigation Menu section above).
+4. Add a thumbnail image to a new folder `assets/case_studies/case_study5/`.
