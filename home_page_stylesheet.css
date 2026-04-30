@@ -59,7 +59,7 @@ footer{
 }
 #blog-container {
   display: flex;
-  gap: 24px;
+  gap: 10px;
   flex-wrap: wrap;
   align-items: stretch;
 }
