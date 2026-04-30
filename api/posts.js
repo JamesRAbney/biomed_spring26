@@ -22,8 +22,8 @@ export default async function handler(req, res) {
       const title = entry.fields.title ?? "";
       const slug = entry.fields.slug ?? "";
       const summary = entry.fields.summary ?? "";
-      const imageUrl = entry.fields.images?.fields?.file?.url
-        ? `https:${entry.fields.images.fields.file.url}`
+      const imageUrl = entry.fields.homepageThumbnail?.fields?.file?.url
+        ? `https:${entry.fields.homepageThumbnail.fields.file.url}`
         : "";
 
       return {
